@@ -1,0 +1,25 @@
+﻿/* 首页 */
+#index{
+	background: url(../images/hb-bg.png) 0 0 repeat-y; background-size: contain;
+}
+#index .nav-bar{
+	position: absolute; background: none;
+}
+.choice-mode{
+	margin-top: 2.14rem; padding: 0 2.86rem; overflow: hidden;
+}
+.choice-mode a{
+	height: 3.04rem; margin-top: 1.79rem; line-height: 3.04rem; font-size: 1.14rem; color: #f15641; text-align: center; border-radius: .36rem; background: #ffc946; display: block;
+}
+.index-footer{
+	position: absolute; left: 0; right: 0; bottom: 0; font-size: .86rem; color: white; text-align: center; overflow: hidden; z-index: 15;
+}
+.index-footer a{
+	line-height: 4.18rem; font-size: .86rem; color: white;
+}
+.index-footer .register-btn a{
+	text-decoration: underline;
+}
+.index-footer .example-intr{
+	padding-top: 1.43rem; font-size: .93rem; display: block;
+}
