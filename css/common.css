@@ -89,11 +89,17 @@ input[type=button],input[type=search],input[type=text],input[type=number]{
 .white-bg{
 	background: white;
 }
+.white-red{
+	background: #ffe7b8;
+}
 .red1{
 	color: #f15641; font-style: normal;	
 }
 .padding-b{
 	padding-bottom: 3.07rem;
+}
+.padding-t{
+	padding-top: 2.71rem;
 }
 
 /* 导航栏 */
@@ -149,40 +155,40 @@ input[type=button],input[type=search],input[type=text],input[type=number]{
 .task-list{
 	margin-top: .36rem; padding-top: 5.21rem;
 }
-.task-list li{
+.task-list li,.redb-ct{
 	position: relative; padding: 1.21rem .89rem 0.89rem;
 }
 .task-list li:after{
 	content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background: #e6e6e6; -webkit-transform: scaleY(.5); transform: scaleY(.5);
 }
-.task-list li dl{
+.task-list li dl,.redb-ct{
 	display: box; display: -webkit-box;
 }
-.task-list li dt{
+.task-list li dt,.redb-ct dt{
 	position: relative; width: 3.04rem; height: 3.04rem; margin-top: 0.36rem; border-radius: 50%; margin-right: .61rem; background: url(../images/hb-pic.png) 0 0 no-repeat; background-size: 100% 100%; overflow: hidden;
 }
-.task-list li dt p{
+.task-list li dt p,.redb-ct dt p{
 	position: absolute; bottom: .3rem; left: 0; right: 0; font-size: .64rem; color: #fff576; text-align: center;
 }
-.task-list li dd{
+.task-list li dd,.redb-ct dd{
 	-webkit-box-flex: 1; box-flex: 1;
 }
-.task-list li .task-type{
+.task-list li .task-type,.redb-ct .task-type{
 	position: relative; font-size: 0.93rem;
 }
-.task-list .task-type .f-right{
+.task-list .task-type .f-right,.redb-ct .task-type .f-right{
 	position: absolute; right: 0; top: 0; color: #888; font-style: normal;
 }
-.task-list .task-describe{
+.task-list .task-describe,.redb-ct .task-describe{
 	height: 1.64rem; line-height: 1.64rem; font-size: 0.93rem;
 }
-.task-list .task-progress{
+.task-list .task-progress,.redb-ct .task-progress{
 	position: relative; width: 6.0rem; height: 0.71rem; line-height: 0.71rem; color: white; text-align: center; border-radius: .71rem; background: #ffc4bc; overflow: hidden; display: block;
 }
-.task-list .task-progress em{
+.task-list .task-progress em,.redb-ct .task-progress em{
 	position: relative; font-size: 0.71rem; font-style: normal; z-index: 2;
 }
-.task-list .task-progress i{
+.task-list .task-progress i,.redb-ct .task-progress i{
 	position: absolute; left: 0; top: 0; height: .71rem; border-radius: .71rem; background: #f15641;
 }
 
