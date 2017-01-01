@@ -165,7 +165,7 @@ input[type=button],input[type=search],input[type=text],input[type=number]{
 	display: box; display: -webkit-box;
 }
 .task-list li dt,.redb-ct dt{
-	position: relative; width: 3.04rem; height: 3.04rem; margin-top: 0.36rem; border-radius: 50%; margin-right: .61rem; background: url(../images/hb-pic.png) 0 0 no-repeat; background-size: 100% 100%; overflow: hidden;
+	position: relative; width: 3.04rem; height: 3.04rem; margin-top: 0.36rem; border-radius: 50%; margin-right: .61rem; background: url(../images/hb_pic.png) 0 0 no-repeat; background-size: 100% 100%; overflow: hidden;
 }
 .task-list li dt p,.redb-ct dt p{
 	position: absolute; bottom: .3rem; left: 0; right: 0; font-size: .64rem; color: #fff576; text-align: center;

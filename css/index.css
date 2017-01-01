@@ -1,6 +1,6 @@
 ﻿/* 首页 */
 #index{
-	background: url(../images/hb-bg.png) 0 0 repeat-y; background-size: contain;
+	background: url(../images/hb_bg.png) 0 0 repeat-y; background-size: contain;
 }
 #index .nav-bar{
 	position: absolute; background: none;
@@ -22,4 +22,9 @@
 }
 .index-footer .example-intr{
 	padding-top: 1.43rem; font-size: .93rem; display: block;
+}
+
+/* 红包详情 */
+.red-inf-q{
+	margin: 0 0.89rem; text-align: center; background: url(../images/hb_bg_2.png) 0 0; border-radius: 0.36rem;
 }
