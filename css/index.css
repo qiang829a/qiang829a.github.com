@@ -41,13 +41,13 @@
 	content: ''; position: absolute; left: 0; top: 0; width: 1.0rem; height: 0.96rem; background: url(../images/angle_1.png) 0 0 no-repeat; background-size: 100% 100%;
 }
 .red-inf-q .already-part i:first-child:before{
-	-webkit-transform: rotate(90deg); transform: rotate(90deg);
+	 background-image: url(../images/angle_3.png);
 }
 .red-inf-q .already-part i:first-child:after{
 	left: 0; top: auto; bottom: 0;
 }
 .red-inf-q .already-part i:last-child:before{
-	left: auto; right: 0; -webkit-transform: rotate(-180deg); transform: rotate(-180deg);
+	left: auto; right: 0; background-image: url(../images/angle_4.png);
 }
 .red-inf-q .already-part i:last-child:after{
 	left: auto; right: 0; top: auto; bottom: 0; background-image: url(../images/angle_2.png);
