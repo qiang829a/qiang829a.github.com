@@ -89,6 +89,9 @@ input[type=button],input[type=search],input[type=text],input[type=number]{
 .white-bg{
 	background: white;
 }
+.show{
+	display: block !important;
+}
 .white-red{
 	background: #ffe7b8;
 }
@@ -100,6 +103,12 @@ input[type=button],input[type=search],input[type=text],input[type=number]{
 }
 .padding-t{
 	padding-top: 2.71rem;
+}
+.m-layer{
+	position: fixed; left: 0; right: 0; top: 0; bottom: 0; z-index: 102; display: none;
+}
+.m-layer .layer-box{
+	position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0,0,0,.4);
 }
 
 /* 导航栏 */

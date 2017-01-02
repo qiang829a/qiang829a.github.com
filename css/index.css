@@ -133,8 +133,16 @@
 	content: 'ME'; position: absolute; right: 0; top: 0; width: 1.43rem; height: 0.79rem; line-height: 0.79rem; font-size: 0.64rem; color: #eb4934; text-align: center; background: #ab2b1b; border-radius: 0.79rem; display: inline-block;
 }
 
-
-
+/* 红包 */
+.red-box{
+	position: absolute; left: 50%; top: 50%; width: 13.68rem; height: 19.29rem; background: url(../images/red_box.png) 0 0 no-repeat; background-size: 100% auto; border-radius: 0.71rem; overflow: hidden; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);
+}
+.red-box.show{
+	
+}
+.red-box span{
+	padding-top: 10rem; font-size: 2.43rem; color: #ffcc4f; text-align: center; display: block;
+}
 
 
 
