@@ -25,10 +25,10 @@
 }
 
 /* 红包详情 */
-#remove-red{
+#open-red{
 	background: url(../images/hb_bg_5.png) 0 0 repeat-y; background-size: 100% auto;
 }
-.remove-inf{
+.open-inf{
 	position: fixed; left: 0; top: 2.71rem; width: 100%; z-index: 50; background: #ffe7b8;
 }
 .red-inf-q{
@@ -123,13 +123,15 @@
 .participate-list dd p{
 	height: 1rem; line-height: 1rem; color: #ffe3a3;
 }
-.participate-list dd .phone{
-	font-size: 0.86rem;
+.participate-list dd .phone em{
+	position: relative; padding-right: 2rem; font-size: 0.86rem; color: #ffe3a3; font-style: normal;
 }
 .participate-list dd .time{
 	padding-top: 0.36rem; font-size: 0.79rem;
 }
-
+.participate-list .me dd .phone em:before{
+	content: 'ME'; position: absolute; right: 0; top: 0; width: 1.43rem; height: 0.79rem; line-height: 0.79rem; font-size: 0.64rem; color: #eb4934; text-align: center; background: #ab2b1b; border-radius: 0.79rem; display: inline-block;
+}
 
 
 
