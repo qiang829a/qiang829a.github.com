@@ -33,7 +33,7 @@
 			</dd>
 		</dl>
 		<!-- 已参与 -->
-		<div class="red-inf-q">
+		<!-- <div class="red-inf-q">
 			<p class="red-inf-t">最高可分</p>
 			<strong class="max-mony">19.99元</strong>
 			<a href="javascript:;" class="already-part">
@@ -44,19 +44,19 @@
 				</span>
 			</a>
 			<p class="already-add">已为您存入余额</p>
-		</div>
+		</div> -->
 		<!-- 拆红包 -->
-		<!-- <div class="red-inf-q red-ok">
+		<div class="red-inf-q red-ok">
 			<p class="red-inf-t">拼手气的时候到啦！</p>
 			<strong class="max-mony">19.99元</strong>
 			<a href="javascript:;" class="already-part">
-				<span>
+				<span id="open">
 					戳我拆红包
 					<i></i>
 					<i></i>
 				</span>
 			</a>
-		</div> -->
+		</div>
 	</div>
 	<div class="red-container">
 		<div class="red-con-box">
@@ -66,7 +66,7 @@
 				<i></i>
 			</div>
 			<ul class="participate-list">
-				<li>
+				<li class="red-best">
 					<dl>
 						<dt>
 							<img src="images/def_pic.png" alt="">
@@ -74,10 +74,11 @@
 						<dd>
 							<p class="phone"><em>152****8798</em></p>
 							<p class="time">2016-12-30 11:27:04:56</p>
+							<span class="receive-money">1.1元</span>
 						</dd>
 					</dl>
 				</li>
-				<li class="me">
+				<li class="red-best me">
 					<dl>
 						<dt>
 							<img src="images/def_pic.png" alt="">
@@ -85,17 +86,46 @@
 						<dd>
 							<p class="phone"><em>152****8798</em></p>
 							<p class="time">2016-12-30 11:27:04:56</p>
+							<span class="receive-money">1.1元</span>
 						</dd>
 					</dl>
 				</li>
 			</ul>
 		</div>
 	</div>
-	<div class="m-layer show">
+	<div class="m-layer">
 		<div class="layer-box"></div>
-		<div class="red-box">
+		<div class="red-box open-trans">
 			<span>0.83元</span>
 		</div>
 	</div>
+	<script src="js/zepto.min.js" type="text/javascript"></script>
+	<script src="js/common.js" type="text/javascript"></script>
+	<script>
+		(function(){
+			var DATA = {
+				openRed: function(){
+					setTimeout(function(){
+						$('.common_popup').detach();
+						$('.m-layer').addClass('show');
+					},50000)
+				}
+			},
+
+			openRed = {
+				init: function(){
+					this.open();
+				},
+
+				open: function(){
+					common.isMove($('#open'),function(){
+						common.loadingText('正在拆红包，不要着急哟~');
+						DATA.openRed();
+					});
+				}
+			};
+			openRed.init();
+		})();
+	</script>
 </body>
 </html>

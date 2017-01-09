@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>幸运币兑换</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="email=no">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body class="white-bg">
+	<div class="nav-bar">
+		<a class="nav-back" href="javascript:;"></a>
+		<h1>幸运币兑换</h1>
+	</div>
+	<div class="padding-t">
+		<div class="balance">
+			<p>账户：<em class="red1">678</em>幸运币</p>
+		</div>
+		<div class="exchange_list">
+			<p class="text_introduce_t">兑换成功后 自动发放到微信零钱。</p>
+			<ul>
+				<li>
+					<a href="javascript:;">
+						<dl>
+							<dt>
+								<img src="images/exchange_1.png" alt="">
+							</dt>
+							<dd>
+								<p class="red1">微信红包</p>
+								<span data-mony="10">立即兑换</span>
+							</dd>
+						</dl>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<dl>
+							<dt>
+								<img src="images/exchange_2.png" alt="">
+							</dt>
+							<dd>
+								<p class="red1">微信红包</p>
+								<span data-mony="15">立即兑换</span>
+							</dd>
+						</dl>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<dl>
+							<dt>
+								<img src="images/exchange_3.png" alt="">
+							</dt>
+							<dd>
+								<p class="red1">微信红包</p>
+								<span data-mony="50">立即兑换</span>
+							</dd>
+						</dl>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<dl>
+							<dt>
+								<img src="images/exchange_4.png" alt="">
+							</dt>
+							<dd>
+								<p class="red1">微信红包</p>
+								<span data-mony="100">立即兑换</span>
+							</dd>
+						</dl>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="m-layer">
+		<div class="layer-box"></div>
+		<div class="popup-def white-bg open_number">
+			<strong>微信红包</strong>
+			<p>您的当前余额为0.27元</p>
+			<div class="popup-def-btn">
+				<a class="cancel" href="javascript:;">取消兑换</a>
+				<a class="zhifubao-pay" href="javascript:;">确定兑换</a>
+			</div>
+		</div>
+	</div>
+	<script src="js/zepto.min.js" type="text/javascript"></script>
+	<script src="js/common.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		(function(){
+			var excData = {
+				exchange: function(iMony){
+					$('.m-layer,.popup-def').removeClass('show');
+					common.PopupText('兑换成功',true);
+				}
+			},
+
+			exchange = {
+				init: function(){
+					this.clickExc();
+				},
+
+				clickExc: function(){
+					var excMony = 0;
+					common.isMove($('.exchange_list li dd span'),function(_this){
+						$('.m-layer,.popup-def').addClass('show');
+						excMony = $(_this).attr('data-mony');
+					});
+					common.isMove($('.popup-def .cancel'),function(){
+						$('.m-layer,.popup-def').removeClass('show');
+					});
+					common.isMove($('.popup-def .zhifubao-pay'),function(){
+						common.loadingText('兑换中，请稍后...');
+						excData.exchange(excMony);
+					});
+				}
+			};
+			exchange.init();
+		})();
+	</script>
+</body>
+</html>

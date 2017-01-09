@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>兑换记录</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="email=no">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<div class="nav-bar">
+		<a class="nav-back" href="javascript:;"></a>
+		<h1>我的红包</h1>
+	</div>
+	<div class="padding-t">
+		<div class="my-hb-box">
+			<div class="select-box full-year">
+				<label>
+					<select data-type="year">
+						<option>2016年</option>
+						<option>2017年</option>
+					</select>
+					<span>2016</span>
+				</label>
+			</div>
+			<div class="select-box order-status">
+				<label>
+					<select data-type="status">
+						<option>全部</option>
+						<option>进行中</option>
+						<option>已完成</option>
+					</select>
+					<span>全部</span>
+				</label>	
+			</div>
+			<dl>
+				<dt><img src="images/icon_1.png" alt=""></dt>
+				<dd><em class="">+</em>26.98<em>元</em></dd>
+			</dl>
+			<div class="income-inf">
+				<span>获得红包78元</span>
+				<span>投入红包78元</span>
+			</div>
+		</div>
+	</div>
+	<div class="hb-list">
+		<ul>
+			<li>
+				<a href="#">
+					<span>
+						<p>拼手气任务</p>
+						<p>2016-12-30 14：36</p>
+					</span>
+					<span>
+						<p>+<em class="red1">0.89元</em></p>
+						<p>-1.00元</p>
+					</span>
+				</a>
+			</li>
+			<li class="open-red">
+				<a href="#">
+					<span>
+						<p>拼手气任务</p>
+						<p>2016-12-30 14：36</p>
+					</span>
+					<span>
+						
+					</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<script src="js/zepto.min.js" type="text/javascript"></script>
+	<script src="js/common.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		(function(){
+			var myData = {
+				HBList: function(value,i){
+					// value == 选中值
+					//i == 0 == 年
+					// i == 1 
+				}
+			},
+			domOper = {
+				init: function(){
+					this.selectS();
+				},
+
+				selectS: function(){
+					$('.select-box select').on('change',function(){
+						$(this).next().text($(this).val());
+						if($(this).attr('data-type') == 'year'){
+							myData.HBList($(this).val(),0);
+						}else if($(this).attr('data-type') == 'status'){
+							myData.HBList($(this).val(),1);
+						}
+					});
+				}
+			};
+			domOper.init();
+		})();
+	</script>
+</body>
+</html>
